@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<meta charset="UTF-8">
+<title>Jobs At Mail</title>
+<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" />
+<link href="{% static 'css/style.css' %}" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+  integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row bg-danger text-light">
+      <div class="col-sm-4">Call Us: +91 7536987741</div>
+      <div class="col-sm-4">Mail Us: email@.com</div>
+      <div class="col-sm-4">Address : Sec-J jankipuram</div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-sm-1 p-0">
+        <img src="{% static 'images/logo.jpg' %}" width="80%" />
+      </div>
+      <div class="col-sm-11 mt-2 text-center">
+        <h4>Job At Mail</h4>
+        <p>(Job At Your Doorsteps)</p>
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-sm-12 p-0">
+        <nav class="navbar navbar-expand-lg bg-info">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">JAM</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'about' %}">About Us</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Registration
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="{% url 'jobseekerreg' %}">Jobseeker Registration</a></li>
+                    <li><a class="dropdown-item" href="{% url 'employerreg' %}">Employer Registration</a></li>
+
+
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="{% url 'login' %}">Login</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="{% url 'contact' %}">Contact Us</a>
+                </li>
+              </ul>
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-sm-12 p-0">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+              aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+              aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
+              aria-label="Slide 6"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="{% static 'images/s1.png' %}" class="d-block w-100" height="400px" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="{% static 'images/slider_2.jpg' %}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="{% static 'images/slider_3.png' %}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="{% static 'images/slider_4.jpg' %}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="{% static 'images/slider_5.jpg' %}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="{% static 'images/slider_6.jpg' %}" class="d-block w-100" alt="...">
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-sm-4 border p-0">
+        <div class="bg-info text-light text-center">
+          <h4>Notice bord</h4>
+          <marquee>
+          {% for n in nw %}
+          <p>{{n.newstext}}</p>
+          {% endfor %}
+          </marquee>
+        </div>
+      </div>
+      <div class="col-sm-8">
+        {% block body %}
+
+
+        {% endblock body %}
+      </div>
+    </div>
+  </div>
+  <div class="row bg-dark">
+    <div class="col-sm-4 text-light text-center">
+        <img src="{% static 'images/logo.jpg' %}" style="border-radius: 75%;"/>
+        <h4>Job At mail</h4>
+    </div>
+    
+    <div class="col-sm-4 text-light text-center">
+      <h4>About Us</h4>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi ratione cum perferendis,<br />
+      inventore eaque doloribus quisquam adipisci hic dolorum distinctio dolorem enim<br />
+      reiciendis necessitatibus minus nulla amet eveniet, deserunt explicabo!</p>
+    <p>&copy; copyright 2022-2023 all right reserved , designed and developed by <i class="text-warning">Vishal
+        Kumar Bhakt</i></p>
+    </div>
+    <div class="col-sm-4 text-light text-center">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3557.3588491646497!2d80.96201571428043!3d26.92383598312279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfd7e0637bf21%3A0x730fe46201abc68a!2z4KS44KWL4KSr4KWN4KSk4KWN4KSq4KWN4KSw4KWLIOCksuCksOCljeCkqOCkv-CkguCklyDgpLjgpYfgpILgpJ_gpLA!5e0!3m2!1shi!2sin!4v1661695634051!5m2!1shi!2sin"
+        width="150" height="150" style="border:0; border-radius: 50%;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade" ></iframe>
+      <h4>Google Map</h4>
+    </div>
+  </div>
+</body>
+
+</html>

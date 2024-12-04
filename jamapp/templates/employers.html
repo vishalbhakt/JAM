@@ -1,0 +1,34 @@
+{% extends 'adminbase.html' %}
+{% block body %}
+    <h4 style="color:blue;text-align:center;">
+        Employers Management
+    </h4>
+    <div style="width:100%;overflow-x:scroll;">
+        <table border="1" style="width:100%;margin:0 auto;">
+            <tr>
+                <th>Firm Name</th>
+                <th>Firm Work</th>
+                <th>Firm Address</th>
+                <th>Person Name</th>
+                <th>Email Address</th>
+                <th>Aadhar No</th>
+                <th>GST No</th>
+                <th>Registration Date</th>
+            </tr>
+            {% for e in emp %}
+                <tr>
+                    <td>{{e.firmname}}</td>
+                    <td>{{e.firmwork}}</td>
+                    <td>{{e.firmaddress}}</td>
+                    <td>{{e.cpname}}</td>
+                    <td>{{e.cpcontactno}}</td>
+                    <td>{{e.cpemailaddress}}</td>
+                    <td>{{e.aadharno}}</td>
+                    <td>{{e.panno}}</td>
+                    <td>{{e.gstno}}</td>
+                    <td>{{e.regdate}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock body %}

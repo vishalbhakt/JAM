@@ -1,0 +1,44 @@
+{% extends "empbase.html" %}
+{% block body %}
+    <h4 style="color:blue;text-align:center;">
+        Post A Job
+    </h4>
+    {% if msg %}
+    <p style="text-align:center;">{{msg}}</p>
+    {% endif %}
+    <div style="width:60%;margin:0 auto;">
+        <form action="{% url 'pjob' %}" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label>Job Title</label>
+                <input type="text" class="form-control" name="jobtitle" required="true"/>
+            </div>
+            <div class="form-group">
+                <label>Post</label>
+                <input type="text" class="form-control" name="post" required="true"/>
+            </div>
+            <div class="form-group">
+                <label>Job Description</label>
+                <textarea name="jobdesc" class="form-control" ></textarea>
+            </div>
+            <div class="form-group">
+                <label>Qualification</label>
+                <input type="text" class="form-control" name="qualification" required="true"/>
+            </div>
+            <div class="form-group">
+                <label>Experience</label>
+                <input type="text" class="form-control" name="experience" required="true"/>
+            </div>
+            <div class="form-group">
+                <label>Location</label>
+                <input type="text" class="form-control" name="location" required="true"/>
+            </div>
+            <div class="form-group">
+                <label>Salary Per Anum</label>
+                <input type="number" class="form-control" name="salarypa" required="true"/>
+            </div>
+            <br/>
+            <input type="submit" value="Submit" class="btn btn-info"/>
+        </form>
+    </div>
+{% endblock body %}

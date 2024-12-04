@@ -1,0 +1,43 @@
+{% extends 'adminbase.html' %}
+{% block body %}
+    <h4 style="color:blue;text-align:center;">
+        News And Events Management
+    </h4>
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <form action="{% url 'addnews' %}" method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label>Enter News</label>
+                    <textarea name="newstext" class="form-control"></textarea>
+                </div>
+                <br/>
+                <input type="submit" value="Add" class="btn btn-info"/>
+            </form>
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+    <br/>
+    <div>
+        <table border="1" style="width:80%;margin:0 auto;">
+            <tr>
+                <th>Id</th>
+                <th>News Text</th>
+                <th>News date</th>
+                <th>Delete</th>
+
+            </tr>
+            {% for n in nw %}
+            <tr>
+                <td>{{n.id}}</td>
+                <td>{{n.newstext}}</td>
+                <td>{{n.newsdate}}</td>
+                <td>
+                    <a href="{% url 'deletenews' id=n.id %}">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock body %}

@@ -1,0 +1,50 @@
+{% extends "jobbase.html" %}
+{% block body %}
+    <h4 style="color:blue;text-align:center;">
+        Jobs List For You
+    </h4>
+    <div style="width:100%">
+        <table border="1" style="margin:0 auto;width:60%;">
+            {% for j in jb %}
+            <tr>
+                <td>Firm Name</td>
+                <td>{{j.firmname}}</td>
+            </tr>
+            <tr>
+                <td>Job Title</td>
+                <td>{{j.jobtitle}}</td>
+            </tr>
+            <tr>
+                <td>Post</td>
+                <td>{{j.post}}</td>
+            </tr>
+            <tr>
+                <td>Job Description</td>
+                <td>{{j.jobdesc}}</td>
+            </tr>
+            <tr>
+                <td>Qualification</td>
+                <td>{{j.qualification}}</td>
+            </tr>
+            <tr>
+                <td>Experience</td>
+                <td>{{j.experience}}</td>
+            </tr>
+            <tr>
+                <td>Location</td>
+                <td>{{j.location}}</td>
+            </tr>
+            <tr>
+                <td>Package</td>
+                <td>{{j.salarypa}}</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>
+                    <a href="{% url 'appliedjobs' id=j.id %}">Apply</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock body %}
